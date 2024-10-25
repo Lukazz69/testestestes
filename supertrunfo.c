@@ -8,11 +8,10 @@ int main() {
     // AQUI EU DEFINO MINHAS VARIÁVEIS QUE VOU USAR AO LONGO DO CÓDIGO.
 
     char codcity[10], codcity2[10];
-    double populacao, populacao2;
+    int populacao, populacao2;
     double area, area2;
-    long int pib, pib2;
     int pontos_turisticos, pontos_turisticos2, opcao, opcao2, opcao3;
-    double pibpercapita, pibpercapita2;
+    double pibpercapita, pibpercapita2, pib, pib2;
     double densidadepopulacional, densidadepopulacional2;
 
     // AQUI EU FAÇO UM MENU PARA PERGUNTAR SE O USUÁRIO QUER INICIAR O JOGO.
@@ -37,9 +36,10 @@ int main() {
 
        printf("Digite o código da primeira cidade:\n");
        scanf("%s", codcity);
+       getchar();
 
        printf("Digite a população da primeira cidade\n");
-       scanf(" %lf", &populacao);
+       scanf(" %d", &populacao);
        getchar();
 
        printf("Digite a área da primeira cidade.\n");
@@ -47,7 +47,7 @@ int main() {
        getchar();
 
        printf("Digite o PIB da primeira cidade.\n");
-       scanf(" %ld", &pib);
+       scanf(" %lf", &pib);
        getchar();
 
        printf("Digite quantos pontos turísticos a primeira cidade tem.\n");
@@ -64,9 +64,10 @@ int main() {
 
        printf("Digite o código da segunda cidade:\n");
        scanf("%s", codcity2);
+       getchar();
 
        printf("Digite a população da segunda cidade\n");
-       scanf(" %lf", &populacao2);
+       scanf(" %d", &populacao2);
        getchar();
 
        printf("Digite a área da segunda cidade.\n");
@@ -74,7 +75,7 @@ int main() {
        getchar();
 
        printf("Digite o PIB da segunda cidade.\n");
-       scanf(" %ld", &pib2);
+       scanf(" %lf", &pib2);
        getchar();
 
        printf("Digite quantos pontos turísticos a segunda cidade tem.\n");
@@ -112,16 +113,16 @@ int main() {
        switch(opcao2){
            case 1:
            if (populacao > populacao2){
-               printf("A Cidade %s com %.3lf de habitantes é a vencedora.\n", codcity, populacao);
+               printf("A Cidade %s com %d de habitantes é a vencedora.\n", codcity, populacao);
            } else {
-               printf("A Cidade %s com %.3lf de habitantes é a vencedora.\n", codcity2, populacao2);
+               printf("A Cidade %s com %d de habitantes é a vencedora.\n", codcity2, populacao2);
            }
            break;
            case 2:
            if (pib > pib2){
-               printf("A Cidade %s com R$ %ld de PIB é a vencedora.\n", codcity, pib);
+               printf("A Cidade %s com R$ %.3lf de PIB é a vencedora.\n", codcity, pib);
            } else {
-               printf("A Cidade %s com R$ %ld de PIB é a vencedora.\n", codcity2, pib2);
+               printf("A Cidade %s com R$ %.3lf de PIB é a vencedora.\n", codcity2, pib2);
            }
            break;
            case 3:
@@ -152,16 +153,16 @@ int main() {
     switch (opcao3){
         case 1:
         if (populacao > populacao2){
-            printf("A Cidade %s com %.3lf de habitantes é a vencedora.\n", codcity, populacao);
+            printf("A Cidade %s com %d de habitantes é a vencedora.\n", codcity, populacao);
         } else {
-            printf("A Cidade %s com %.3lf de habitantes é a vencedora.\n", codcity2, populacao2);
+            printf("A Cidade %s com %d de habitantes é a vencedora.\n", codcity2, populacao2);
         }
         break;
         case 2:
         if (pib > pib2){
-            printf("A Cidade %s com R$ %ld de PIB é a vencedora.\n", codcity, pib);
+            printf("A Cidade %s com R$ %.3lf de PIB é a vencedora.\n", codcity, pib);
         } else {
-            printf("A Cidade %s com R$ %ld de PIB é a vencedora.\n", codcity2, pib2);
+            printf("A Cidade %s com R$ %.3lf de PIB é a vencedora.\n", codcity2, pib2);
         }
         break;
         case 3:
@@ -199,9 +200,9 @@ int main() {
     printf("\n*** Dados da primeira cidade ***\n\n");
     
     printf("Código da cidade: %s\n", codcity);
-    printf("População: %.2f habitantes\n", populacao);
+    printf("População: %d habitantes\n", populacao);
     printf("Área: %.2f km\n", area);
-    printf("PIB: %ld\n", pib);
+    printf("PIB: %.3lf\n", pib);
     printf("Pontos turísticos: %d\n", pontos_turisticos);
     printf("PIB per Capita: %.2f\n", pibpercapita);
     printf("Densidade populacional: %.2f\n\n", densidadepopulacional);
@@ -209,9 +210,9 @@ int main() {
     printf("*** Dados da segunda cidade ***\n\n");
 
     printf("Código da cidade: %s\n", codcity2);
-    printf("População: %.2f habitantes\n", populacao2);
+    printf("População: %d habitantes\n", populacao2);
     printf("Área: %.2f km\n", area2);
-    printf("PIB: %ld\n", pib2);
+    printf("PIB: %.3lf\n", pib2);
     printf("Pontos turísticos: %d\n", pontos_turisticos2);
     printf("PIB per Capita: %.2f\n", pibpercapita2);
     printf("Densidade populacional: %.2f\n", densidadepopulacional2);
