@@ -62,25 +62,17 @@ int main() {
 
        // AQUI EU COLETO OS DADOS DA SEGUNDA CIDADE.
 
+       srand(time(0));
+
        printf("Digite o código da segunda cidade:\n");
-       scanf("%s", codcity2);
+       scanf(" %s", codcity2);
        getchar();
 
-       printf("Digite a população da segunda cidade\n");
-       scanf(" %d", &populacao2);
-       getchar();
+       populacao2 = (rand() % 4000000) + 1000000;
+       area2 = (rand() % 7000) + 1000.8;
+       pib2 = (rand() % 8000000000) + 1000000000;
+       pontos_turisticos2 = (rand() % 30) + 10;
 
-       printf("Digite a área da segunda cidade.\n");
-       scanf(" %lf", &area2);
-       getchar();
-
-       printf("Digite o PIB da segunda cidade.\n");
-       scanf(" %lf", &pib2);
-       getchar();
-
-       printf("Digite quantos pontos turísticos a segunda cidade tem.\n");
-       scanf(" %d", &pontos_turisticos2);
-       getchar();
 
        // AQUI EU CALCULO O PIBPERCAPITA E A DENSIDADE POPULACIONAL DA SEGUNDA CIDADE CADASTRADA.
 
@@ -188,6 +180,12 @@ int main() {
         break;
         default:
         printf("Código Inválido.\n");
+    }
+
+    if (codcity == codcity2){
+        printf("\n\nA Cidade %s atingiu melhor pontuação nas duas categorias, então ela é a **VENCEDORA**.\n\n", codcity2);
+    } else {
+        printf("\n\nA cidade %s e a cidade %s cada uma ganhou em uma categoria, sendo assim estamos **SEM GANHADOR**.\n\n", codcity, codcity2);
     }
 
     // AQUI EU MOSTRO TODOS OS DADOS NA TELA DA CIDADE APÓS A COMPARAÇÃO.
